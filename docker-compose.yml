@@ -1,0 +1,11 @@
+version: "2.4"
+services:
+  home_assistant:
+    container_name: "home-assistant"
+    image: homeassistant/raspberrypi4-homeassistant:stable
+    volumes:
+      - /docker/volumes/home-assistant/config:/config
+    network_mode: host
+    restart: always
+    environment:
+      - TZ=Europe/Athens
