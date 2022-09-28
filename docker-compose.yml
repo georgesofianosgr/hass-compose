@@ -33,14 +33,3 @@ services:
     restart: always
     environment:
       - TZ=Europe/Athens
-  postgres:
-    container_name: "postgres"
-    image: postgres:13-alpine
-    volumes:
-      - /docker/volumes/postgres:/var/lib/postgresql/data
-    network_mode: host
-    restart: always
-    environment:
-      TZ: "Europe/Athens"
-      POSTGRES_USER: 'hass'
-      POSTGRES_PASSWORD: "MyHash"
